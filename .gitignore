@@ -1,0 +1,6 @@
+cache/
+output/
+drafts/
+*.pyc
+*.pid
+*.swp
