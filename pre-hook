@@ -1,0 +1,16 @@
+#!/bin/sh
+# symlink to .git/hooks/ in repository
+while read local_ref local_sha remote_ref remote_sha
+do
+  if [ "$remote_ref" = "refs/heads/source"  ]
+  then
+    echo 'pushing output folder (production version) to master...'
+    pelican content -o output -s publishconf.py
+    echo marcbecc.me > output/CNAME
+    ghp-import output
+    git push --no-verify git@github.com:Shrek6/Shrek6.github.io.git gh-pages:master
+    pelican content -o output
+  fi
+done
+
+exit 0
