@@ -4,3 +4,9 @@ drafts/
 *.pyc
 *.pid
 *.swp
+./output/*
+./cache/*
+./drafts/*
+./output/
+./drafts/
+./cache/
