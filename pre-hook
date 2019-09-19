@@ -2,7 +2,7 @@
 # symlink to .git/hooks/ in repository
 while read local_ref local_sha remote_ref remote_sha
 do
-  if [ "$remote_ref" = "refs/heads/source"  ]
+  if [ "$remote_ref" = "refs/heads/source" ]
   then
     echo 'pushing output folder (production version) to master...'
     pelican content -o output -s publishconf.py
