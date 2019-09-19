@@ -4,5 +4,5 @@ Category: Misc
 
 My personal website, the first one. 
 
-This is a new line
+This is a new line.
 
