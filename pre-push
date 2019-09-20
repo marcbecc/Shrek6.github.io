@@ -9,7 +9,9 @@ do
     echo marcbecc.me > output/CNAME
     ghp-import -m "Generate Pelican site" -b master output
     # ghp-import -m "Generate Pelican site" -b master -c marcbecc.me output
-    git push --no-verify git@github.com:Shrek6/Shrek6.github.io.git master:master
+    git push --no-verify origin master
+    # git push --no-verify git@github.com:Shrek6/Shrek6.github.io.git master
+    # git push --no-verify git@github.com:Shrek6/Shrek6.github.io.git master:master
     pelican content -o output
   fi
 done
