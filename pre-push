@@ -7,8 +7,9 @@ do
     echo 'pushing output folder (production version) to master...'
     pelican content -o output -s publishconf.py
     echo marcbecc.me > output/CNAME
-    ghp-import output
-    git push --no-verify git@github.com:Shrek6/Shrek6.github.io.git gh-pages:master
+    ghp-import -m "Generate Pelican site" -b master output
+    # ghp-import -m "Generate Pelican site" -b master -c marcbecc.me output
+    git push --no-verify git@github.com:Shrek6/Shrek6.github.io.git master:master
     pelican content -o output
   fi
 done
