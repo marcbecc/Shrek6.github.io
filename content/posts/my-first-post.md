@@ -7,3 +7,7 @@ draft = false
 +++
 
 This is my first post, using Midnight theme
+
+new line
+
+new line

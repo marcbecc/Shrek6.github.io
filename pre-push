@@ -4,14 +4,12 @@ while read local_ref local_sha remote_ref remote_sha
 do
   if [ "$remote_ref" = "refs/heads/source" ]
   then
-    echo 'pushing output folder (production version) to master...'
-    pelican content -o output -s publishconf.py
-    echo marcbecc.me > output/CNAME
-    ghp-import -m "Generate Pelican site" -b master output
-    # ghp-import -m "Generate Pelican site" -b master -c marcbecc.me output
+    echo 'pushing public folder to master...'
+    hugo 
+    echo marcbecc.me > public/CNAME
+    ghp-import -m "Generate Pelican site" -b master public
     git push --no-verify origin master
-    # git push --no-verify git@github.com:Shrek6/Shrek6.github.io.git master:master # using ssh
-    pelican content -o output
+    hugo
   fi
 done
 
