@@ -6,8 +6,6 @@ disable_comments = false
 draft = false
 +++
 
-This is my first post, using Midnight theme
-
-new line
+This is my first post, using ananke theme
 
 new line
